@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<package>
+    <name>Aleap_Integrator</name>
+    <version>0.3.11</version>
+    <stability>beta</stability>
+    <license>MITL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>A Achieve Leap leva seus produtos aos maiores marketplaces, como Extra, Mercado Livre e Wal-Mart.</summary>
+    <description>&lt;strong&gt;Venda seus produtos nas maiores lojas da internet!&lt;/strong&gt;&#xD;
+&#xD;
+Voc&#xEA; quer uma visibilidade maior no mercado?&#xD;
+&#xD;
+E se voc&#xEA; pudesse vender seus produtos nos maiores canais de vendas da internet e elevar seus n&#xFA;meros sem se complicar com novas tecnologias e marketing?&#xD;
+&#xD;
+A &lt;a href="http://www.achieveleap.com"&gt;Achieve Leap&lt;/a&gt; leva seus produtos aos maiores marketplaces do mercado. &#xC9; muito f&#xE1;cil:&#xD;
+&#xD;
+&lt;ol&gt;&#xD;
+&lt;li&gt;Cadastre-se no site da &lt;a href="http://www.achieveleap.com"&gt;Achieve Leap&lt;/a&gt;*.&lt;/li&gt;&#xD;
+&lt;li&gt;Instale o plug-in&lt;/li&gt;&#xD;
+&lt;li&gt;Configure a &lt;a href="http://admin.achieveleap.com/products/settings/ecommerce/magento"&gt;integra&#xE7;&#xE3;o&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;Envie seus produtos para os marketplaces.&lt;/li&gt;&#xD;
+&lt;li&gt;E acompanhe as vendas.&lt;/li&gt;&#xD;
+&lt;/ol&gt;&#xD;
+&#xD;
+*Devido &#xE0;s regras que cada marketplace possui e para te atender melhor, nossa equipe comercial entrar&#xE1; em contato.</description>
+    <notes>0.3.11&#xD;
+- Add handling_time mapping&#xD;
+&#xD;
+0.3.10&#xD;
+- Fix custom store attributes&#xD;
+&#xD;
+0.3.9&#xD;
+- Add /aleap/setup/error?http_code=xxx action&#xD;
+&#xD;
+0.3.8&#xD;
+- Accept orders for people without last name&#xD;
+- Differs billing and shipping names&#xD;
+&#xD;
+0.3.7&#xD;
+- Old PHP compatibility&#xD;
+- Add order diagnostics&#xD;
+&#xD;
+0.3.6&#xD;
+- Add attribute mapping to name and description&#xD;
+&#xD;
+0.3.5&#xD;
+- Add manual shipping method option&#xD;
+&#xD;
+0.3.4&#xD;
+- Add images to variants&#xD;
+&#xD;
+0.3.3&#xD;
+- Add document info to customer&#xD;
+&#xD;
+0.3.2&#xD;
+- Configure the shipping method&#xD;
+- Add aleap payment method&#xD;
+&#xD;
+0.3.0&#xD;
+- Register order&#xD;
+&#xD;
+0.2.10&#xD;
+- Bugfix: "Call to a member function fetchAll()" em alguns clientes&#xD;
+&#xD;
+0.2.9&#xD;
+- Use o storeId para selecionar as categorias&#xD;
+&#xD;
+0.2.8&#xD;
+- Pre&#xE7;os de produtos configur&#xE1;veis&#xD;
+&#xD;
+0.2.7&#xD;
+- URL do produto&#xD;
+&#xD;
+0.2.6&#xD;
+- Pre&#xE7;o atual e com desconto&#xD;
+&#xD;
+0.2.5&#xD;
+- Retorna atributos de produtos mesmo fora do contexto do magento REST&#xD;
+- Usa varia&#xE7;&#xF5;es e melhores atributos&#xD;
+- Coloca as categorias como um path&#xD;
+- Permite mais atributos, como "model"&#xD;
+- Paging</notes>
+    <authors><author><name>Alexandre Gandra</name><user>achieveleap</user><email>devops@achieveleap.com</email></author></authors>
+    <date>2015-03-16</date>
+    <time>19:08:02</time>
+    <contents><target name="magecommunity"><dir name="Aleap"><dir name="Integrator"><dir name="Helper"><file name="Data.php" hash="f7812698b9400d07ea43dacbcd402660"/></dir><dir name="Model"><file name="AdminOrder.php" hash="924192ad36f0edcd568f765a1db26eb7"/><file name="Customer.php" hash="d75adee678bec227d05af706f5032184"/><file name="PaymentMethod.php" hash="06832938f6c902147be28bc8e516e312"/><file name="Product.php" hash="5e20e4aa612651c458094e69ae8350b1"/><dir name="Resource"><file name="Product.php" hash="79f6afdc634c3161afc0ad8ae65eac5f"/></dir><dir name="Source"><file name="Attribute.php" hash="0602edcb558e5da96b2841f63b42876a"/><file name="ShippingMethod.php" hash="509ae7b602d6c0376a1cee538ca7fb6d"/></dir><file name=".DS_Store" hash="e83c71e682bed0e7827e17ba69d50c79"/></dir><dir name="controllers"><file name="OrdersController.php" hash="d7e13c81eafdb16a118c43abc654f85f"/><file name="ProductsController.php" hash="ff52a2fa680c70c2ba54c8366ea21f9b"/><file name="SetupController.php" hash="ef5bc977c26be823480f4e625ea7be05"/></dir><dir name="etc"><file name="config.xml" hash="eb3f34d49ac887ca93acf83152d30815"/><file name="system.xml" hash="2d7f01104749cf21fb635c3e9cb8b25a"/></dir><file name=".DS_Store" hash="64bc3ce0f00a45be64ee8ccacfe6b69e"/></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Aleap_Integrator.xml" hash="4f47567b3bc381a4a131db92f2b6fe61"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>
