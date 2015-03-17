@@ -43,7 +43,9 @@ class Aleap_Integrator_Model_Resource_Product extends Mage_Core_Model_Resource_D
         }
 
         /** @noinspection PhpUndefinedMethodInspection */
-        $target->description = self::alt($mp, 'description');
+        //$target->description = self::alt($mp, 'description');
+		$target->description = self::alt($mp, 'descricao_marketplaces');
+		
         $target->images = self::images($mp);
         if ($mp->getTypeId() == 'simple') {
             $target->sku = $mp->getSku();
