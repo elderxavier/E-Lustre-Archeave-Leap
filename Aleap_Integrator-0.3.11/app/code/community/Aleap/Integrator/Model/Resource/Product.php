@@ -43,9 +43,7 @@ class Aleap_Integrator_Model_Resource_Product extends Mage_Core_Model_Resource_D
         }
 
         /** @noinspection PhpUndefinedMethodInspection */
-        //$target->description = self::alt($mp, 'description');
-		$target->description = self::alt($mp, 'descricao_marketplaces');
-		
+        $target->description = self::alt($mp, 'description');
         $target->images = self::images($mp);
         if ($mp->getTypeId() == 'simple') {
             $target->sku = $mp->getSku();
@@ -56,15 +54,7 @@ class Aleap_Integrator_Model_Resource_Product extends Mage_Core_Model_Resource_D
         }
         $target->brand = self::brand($mp);
         $target->categories = self::categories($mp, $storeRootId);
-        $target->delivery = self::delivery($mp);		
-		//Prazo de fabrição;
-		$target->deadline = $mp->getData('deadline');
-		//EAN
-		$target->ean = $mp->getData('deadline');
-		//Detalhes das lâmpadas
-		$target->lampadas_txt = $mp->getData('lampadas_txt');
-		
-		
+        $target->delivery = self::delivery($mp);
 
         Mage::log("Assign product: " . $target->getId() . $target->getName() . "\n Brand: " . $target->brand . "\n");
     }
@@ -224,12 +214,6 @@ class Aleap_Integrator_Model_Resource_Product extends Mage_Core_Model_Resource_D
     {
         $result = array();
         $result['weight'] = (float)$mp->getWeight();
-		
-		//dimensões fixas correios
-		$result['length'] = 50;
-		$result['width'] = 50;
-		$result['height'] = 50;		
-		
 
         return $result;
     }
